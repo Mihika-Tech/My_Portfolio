@@ -1,0 +1,189 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+/* ---- Base Reset ---- */
+body {
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fdfaff;
+    color: #333;
+  }
+  
+  h1, h2, h3, h4 {
+    font-weight: 700;
+    color: #4b2e83; /* deep violet */
+  }
+  
+  a {
+    color: #6c63ff;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  a:hover {
+    opacity: 0.85;
+    text-decoration: none;
+  }
+  
+  /* ---- Hero Section ---- */
+  #hero {
+    background: linear-gradient(145deg, #f3e8ff, #fdfaff);
+  }
+  
+  #hero h1 {
+    color: #4b2e83;
+  }
+  
+  #hero .btn-primary {
+    background-color: #a27aff;
+    border-color: #a27aff;
+  }
+  
+  #hero .btn-outline-secondary {
+    border-color: #a27aff;
+    color: #a27aff;
+  }
+  
+  #hero .btn-outline-secondary:hover {
+    background-color: #a27aff;
+    color: #fff;
+  }
+  
+  /* ---- Buttons ---- */
+  .btn-glow:hover {
+    box-shadow: 0 0 15px rgba(162, 122, 255, 0.5);
+  }
+  
+  .btn-outline-primary {
+    color: #a27aff;
+    border-color: #a27aff;
+  }
+  
+  .btn-outline-primary:hover {
+    background-color: #a27aff;
+    color: white;
+  }
+
+  .btn.custom-filter-btn {
+  color: #a65cfb !important;
+  border-color: #a65cfb !important;
+}
+
+.btn.custom-filter-btn:hover {
+  background-color: #a65cfb !important;
+  color: white !important;
+  opacity: 1;
+}
+
+.btn.custom-filter-btn.active {
+  background-color: #a65cfb !important;
+  color: white !important;
+  border-color: #a65cfb;
+}
+
+  #github-button {
+    color: #a65cfb;
+    border-color: #a65cfb;
+  }
+
+  #github-button:hover {
+   background-color: #a65cfb;
+    color: white; 
+    opacity: 1;
+  }
+
+  #live-button {
+   background-color: #a65cfb;
+    color: white;  
+  }
+
+  #live-button:hover {
+    color: #a65cfb;
+    border-color: #a65cfb;
+    background-color: white;
+  }
+  
+  /* ---- Card Styles ---- */
+  .card {
+    border: none;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 20px rgba(162, 122, 255, 0.15);
+  }
+  
+  /* ---- Section Titles ---- */
+  section h2 {
+    font-size: 2.5rem;
+    color: #4b2e83;
+  }
+  
+  /* ---- Skills Badges ---- */
+  .badge {
+    font-size: 0.95rem;
+    background-color: #a65cfb;
+    color: #180048;
+    border-radius: 0.75rem;
+    padding: 0.7rem 1rem;
+  }
+  
+  /* ---- Contact Section ---- */
+  #contact {
+    background-color: #f3e8ff;
+  }
+  
+  #contact .form-control {
+    border-radius: 0.75rem;
+    border: 1px solid #d9c8ff;
+  }
+  
+  #contact .btn-primary {
+    background-color: #a27aff;
+    border-color: #a27aff;
+  }
+  
+  #contact .btn-primary:hover {
+    background-color: #9065ff;
+  }
+  
+  /* ---- Footer ---- */
+  footer {
+    background-color: #4b2e83;
+    color: white;
+  }
+  
+  footer a {
+    color: #d1c4ff;
+  }
+  
+  footer a:hover {
+    color: #fff;
+  }
+  
+  /* ---- Section Spacing ---- */
+  section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  
+  /* ---- AOS Animation Delays (optional) ---- */
+  [data-aos] {
+    transition-duration: 0.6s !important;
+  }
+  
