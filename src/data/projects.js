@@ -75,7 +75,7 @@ export const projects = [
       id: 9,
       title: "Factors Influencing Student Performance – SQL & Tableau Analysis",
       category: "Data",
-      image: "/assets/student_performance.png",
+      image: "assets/student_performance.png",
       github: "https://github.com/Mihika-Tech/Factors-Influencing-Student-Performance-SQL-Tableau-Analysis",
       live: "https://public.tableau.com/app/profile/mihika.dakappagari/viz/StudentPerformance_17477799049500/Dashboard1?publish=yes",
       description: "SQL analysis of student performance based on different factors with Tableau visualizations.",
