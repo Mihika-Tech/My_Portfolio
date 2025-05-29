@@ -89,6 +89,14 @@ export const projects = [
       live: "",
       description: "Puzzle horror game with first-person interaction and USC-themed setting.",
     },
-    
+    {
+      id: 11,
+      title: "GPT Gift Genie",
+      category: "AI/ML",
+      image: "/assets/soon.png",
+      github: "https://github.com/Mihika-Tech/GPT_Gift_Genie",
+      live: "https://mihika-tech.github.io/GPT_Gift_Genie/",
+      description: "AI tool that suggests gifts based on recipient info and tone.",
+    }
   ];
   
