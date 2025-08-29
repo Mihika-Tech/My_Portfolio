@@ -37,12 +37,12 @@ export const projects = [
     },
     {
       id: 5,
-      title: "Amazon Redesign",
-      category: "UI/UX",
-      image: "assets/soon.png",
-      github: "",
+      title: "Live Collaboration Platform",
+      category: "Full Stack",
+      image: "assets/livecollab.png",
+      github: "https://github.com/Mihika-Tech/LiveCollab",
       live: "",
-      description: "Figma case study to simplify Amazon’s mobile checkout.",
+      description: "A collaboration platform with real-time chatting, screen sharing, private rooms and many more.",
     },
     {
       id: 6,
