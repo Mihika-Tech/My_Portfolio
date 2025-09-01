@@ -16,7 +16,7 @@ function Hero() {
         </p>
         <div className="mt-4">
           <a href="#projects" className="btn btn-primary me-3">View Projects</a>
-          <a href="assets/Mihika_Dakappagari_Resume.pdf" target="_blank" className="btn btn-outline-secondary">Download Resume</a>
+          <a href="assets/Mihika_Dakappagari_Resume_SDE.pdf" target="_blank" className="btn btn-outline-secondary">Download Resume</a>
         </div>
       </div>
     </section>
