@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 251 100% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 251 100% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 251 100% 10%;
+
+    /* Purple gradient palette */
+    --primary: 291 100% 24%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 280 100% 24%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 280 20% 96%;
+    --muted-foreground: 280 10% 45%;
+
+    --accent: 317 100% 24%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 280 20% 90%;
+    --input: 280 20% 90%;
+    --ring: 291 100% 24%;
+
+    --radius: 1rem;
+
+    /* Custom gradient colors */
+    --navy-blue: 251 100% 24%;
+    --navy-blue-light: 251 100% 70%;
+    --persian-indigo: 266 100% 24%;
+    --persian-indigo-light: 266 100% 70%;
+    --indigo: 274 100% 24%;
+    --purple: 291 100% 24%;
+    --purple-light: 291 100% 70%;
+    --purple-game: 310 100% 70%;
+    --byzantium: 317 100% 24%;
+    --byzantium-light: 317 100% 70%;
+    --murrey: 326 100% 24%;
+    --murrey-light: 326 100% 70%;
+    --ai-teal: 280 100% 70%;
+    
+    /* Gradient definitions */
+    --gradient-primary: linear-gradient(135deg, hsl(251 100% 24%), hsl(266 100% 24%), hsl(291 100% 24%));
+    --gradient-accent: linear-gradient(135deg, hsl(291 100% 24%), hsl(317 100% 24%), hsl(326 100% 24%));
+    --gradient-full: linear-gradient(135deg, hsl(251 100% 24%), hsl(266 100% 24%), hsl(274 100% 24%), hsl(280 100% 24%), hsl(286 100% 24%), hsl(291 100% 24%), hsl(300 100% 24%), hsl(310 100% 24%), hsl(317 100% 24%), hsl(326 100% 24%));
+    
+    /* Glass effects */
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    
+    /* Shadows */
+    --shadow-glow: 0 0 40px hsl(291 100% 24% / 0.3);
+    --shadow-card: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 251 100% 5%;
+    --foreground: 0 0% 98%;
+
+    --card: 251 80% 8%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 251 80% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 291 100% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 280 100% 50%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 280 30% 15%;
+    --muted-foreground: 280 10% 65%;
+
+    --accent: 317 100% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 280 30% 20%;
+    --input: 280 30% 20%;
+    --ring: 291 100% 60%;
+    
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    
+    --shadow-glow: 0 0 40px hsl(291 100% 60% / 0.5);
+    --shadow-card: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+  }
+  
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Allows setting the gradient via the --role-gradient CSS variable */
+  .dynamic-gradient-text {
+    background: var(--role-gradient, var(--gradient-primary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* Cross-browser text transparency */
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .gradient-border {
+    position: relative;
+  }
+  
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 2px;
+    background: var(--gradient-primary);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+}

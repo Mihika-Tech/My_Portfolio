@@ -1,0 +1,225 @@
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { ExternalLink, Github } from "lucide-react";
+import { useState } from "react";
+
+const Projects = () => {
+  const [activeFilter, setActiveFilter] = useState("all");
+
+  const projects = [
+    {
+      title: "LiveCollab",
+      description: "Real-time collaboration platform supporting 100+ concurrent users with video conferencing, live chat, and analytics. Built with WebRTC P2P streaming, Socket.io messaging (<100ms latency), and secure role-based access control.",
+      tech: ["React", "TypeScript", "Node.js", "WebRTC", "MySQL", "Socket.io"],
+      github: "https://github.com/Mihika-Tech/LiveCollab",
+      demo: "#",
+      highlights: ["100+ concurrent users", "< 100ms latency", "60% faster queries"],
+      category: "fullstack"
+    },
+    {
+      title: "Pantry-To-Plate",
+      description: "AI-powered recipe finder that generates personalized recipes based on available ingredients, cuisine preferences, and flavor profiles. Features intelligent ingredient substitutions and cooking time optimization.",
+      tech: ["React", "Node.js", "AI APIs", "MongoDB"],
+      github: "https://github.com/Mihika-Tech/Pantry-to-Plate",
+      demo: "#",
+      highlights: ["AI recipe generation", "Smart substitutions", "Flavor customization"],
+      category: "ai"
+    },
+    {
+      title: "AI Day Planner",
+      description: "Location-based intelligent day planner that uses weather data and personal preferences to suggest activities, outfits, destinations, and curated music playlists for the perfect day.",
+      tech: ["React", "AI APIs", "Weather API", "Spotify API"],
+      github: "https://github.com/Mihika-Tech/AI-Day-Planner",
+      demo: "#",
+      highlights: ["Weather integration", "Smart recommendations", "Personalized playlists"],
+      category: "ai"
+    },
+    {
+      title: "Social Chat",
+      description: "Secure real-time chat platform with group chat functionality, user authentication, profile management, and live typing indicators. Built with MERN stack and optimized for 30% lower latency.",
+      tech: ["MongoDB", "Express", "React", "Node.js", "Socket.io"],
+      github: "https://github.com/Mihika-Tech/Social-Chat",
+      demo: "#",
+      highlights: ["Real-time messaging", "30% lower latency", "Group chat support"],
+      category: "fullstack"
+    },
+    {
+      title: "SugarBooth",
+      description: "Fun photobooth application with custom filters and dynamic sticker placement. Currently expanding features to include animated effects and photo strip generation with customization options.",
+      tech: ["React", "Canvas API", "CSS Filters"],
+      github: "https://github.com/Mihika-Tech/SugarBooth",
+      demo: "https://mihika-tech.github.io/SugarBooth/",
+      highlights: ["Custom filters", "Sticker placement", "Photo strip export"],
+      category: "fullstack"
+    },
+    {
+      title: "GPT Gift Genie",
+      description: "AI-powered gift recommendation engine that analyzes recipient preferences, occasions, and budget constraints to suggest personalized gift ideas with purchase links and alternatives.",
+      tech: ["React", "OpenAI API", "Node.js"],
+      github: "https://github.com/Mihika-Tech/GPT_Gift_Genie",
+      demo: "https://mihika-tech.github.io/GPT_Gift_Genie/",
+      highlights: ["AI recommendations", "Budget optimization", "Personalized suggestions"],
+      category: "ai"
+    },
+    {
+      title: "Personalized e-Learning System",
+      description: "Adaptive learning platform using K-means clustering to predict learning styles and reinforcement learning to customize quiz flows. Led a 3-member team to integrate ML models with educational content.",
+      tech: ["Django", "React", "Machine Learning", "K-means", "RL"],
+      github: "#",
+      demo: "#",
+      highlights: ["Learning style prediction", "Adaptive content", "ML integration"],
+      category: "ai"
+    },
+    {
+      title: "Student Performance Analysis",
+      description: "Comprehensive SQL and Tableau analysis exploring how study time, attendance, demographics, and personal habits affect academic performance. Features interactive dashboards and predictive insights.",
+      tech: ["SQL", "Tableau", "Data Analysis", "PostgreSQL"],
+      github: "https://github.com/Mihika-Tech/Factors-Influencing-Student-Performance-SQL-Tableau-Analysis",
+      demo: "https://public.tableau.com/app/profile/mihika.dakappagari/viz/StudentPerformance_17477799049500/Dashboard1?publish=yes",
+      highlights: ["Data visualization", "Predictive analytics", "Interactive dashboards"],
+      category: "data"
+    },
+    {
+      title: "Cozy Pomodoro Timer",
+      description: "Beautiful and functional Pomodoro timer with ambient sounds, task tracking, and productivity statistics. Designed with a cozy aesthetic and smooth animations for better focus.",
+      tech: ["React", "TypeScript", "Local Storage"],
+      github: "https://github.com/Mihika-Tech/Cozy-Pomodoro-Timer",
+      demo: "https://mihika-tech.github.io/Cozy-Pomodoro-Timer/",
+      highlights: ["Ambient sounds", "Task tracking", "Beautiful UI"],
+      category: "fullstack"
+    },
+    {
+      title: "Shrink Wars",
+      description: "Competitive two-player game where players must avoid falling objects to remain the smaller one until time runs out. Features dynamic difficulty scaling and real-time physics-based gameplay.",
+      tech: ["Unity", "C#", "Physics Engine"],
+      github: "https://github.com/Mihika-Tech/ShrinkWars",
+      demo: "https://mihika-tech.github.io/ShrinkWars/",
+      highlights: ["Two-player mode", "Physics-based", "Dynamic difficulty"],
+      category: "game"
+    },
+    {
+      title: "Who's the Impostor",
+      description: "Memory-puzzle game where players navigate a large map to find impostors based on color and shape patterns revealed at the start. Test your memory and observation skills in this fast-paced challenge.",
+      tech: ["Unity", "C#", "Game Design"],
+      github: "https://github.com/MihikaD0513/main-snack-overflow",
+      demo: "https://gaurav148.github.io/Waste-Warrior-Unity-Game/",
+      highlights: ["Memory mechanics", "Pattern recognition", "Large map exploration"],
+      category: "game"
+    }
+  ];
+
+  const categories = [
+    { id: "all", label: "All Projects" },
+    { id: "fullstack", label: "Full Stack" },
+    { id: "ai", label: "AI" },
+    { id: "game", label: "Game" },
+    { id: "data", label: "Data" }
+  ];
+
+  const filteredProjects = activeFilter === "all" 
+    ? projects 
+    : projects.filter(project => project.category === activeFilter);
+
+  return (
+    <section className="py-24 bg-background" id="projects">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12 animate-fade-in-up">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 gradient-text font-['Space_Grotesk']">
+            Featured Projects
+          </h2>
+          <div className="w-20 h-1 bg-gradient-to-r from-navy-blue to-murrey mx-auto rounded-full"></div>
+          <p className="mt-6 text-lg text-foreground/70 max-w-2xl mx-auto">
+            A collection of projects showcasing my expertise in full-stack development, 
+            real-time systems, and AI integration
+          </p>
+        </div>
+
+        {/* Filter Buttons */}
+        <div className="flex flex-wrap gap-3 justify-center mb-12 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+          {categories.map((category) => (
+            <Button
+              key={category.id}
+              variant={activeFilter === category.id ? "default" : "outline"}
+              onClick={() => setActiveFilter(category.id)}
+              className={`transition-all ${
+                activeFilter === category.id
+                  ? "bg-gradient-to-r from-purple to-byzantium text-white border-none"
+                  : "border-primary/30 text-primary hover:bg-primary/10"
+              }`}
+            >
+              {category.label}
+            </Button>
+          ))}
+        </div>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          {filteredProjects.map((project, index) => (
+            <Card 
+              key={project.title}
+              className="p-6 glass-card border-primary/20 hover:border-primary/40 transition-all duration-300 hover:scale-105 flex flex-col animate-fade-in-up group"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <h3 className="text-2xl font-bold mb-3 text-primary group-hover:gradient-text transition-all">
+                {project.title}
+              </h3>
+              
+              <p className="text-foreground/70 mb-4 flex-grow leading-relaxed">
+                {project.description}
+              </p>
+              
+              {project.highlights && (
+                <div className="mb-4 space-y-1">
+                  {project.highlights.map((highlight) => (
+                    <div key={highlight} className="flex items-center gap-2 text-sm text-primary">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary"></div>
+                      <span>{highlight}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
+              
+              <div className="flex flex-wrap gap-2 mb-4">
+                {project.tech.map((tech) => (
+                  <Badge 
+                    key={tech}
+                    variant="secondary"
+                    className="bg-primary/10 text-primary border border-primary/20 text-xs"
+                  >
+                    {tech}
+                  </Badge>
+                ))}
+              </div>
+              
+              <div className="flex gap-3 mt-auto">
+                <Button 
+                  variant="outline" 
+                  size="sm"
+                  className="flex-1 border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground transition-all"
+                  asChild
+                >
+                  <a href={project.github} target="_blank" rel="noopener noreferrer">
+                    <Github className="mr-2 h-4 w-4" />
+                    Code
+                  </a>
+                </Button>
+                <Button 
+                  size="sm"
+                  className="flex-1 bg-gradient-to-r from-purple to-byzantium text-white hover:opacity-90 transition-all"
+                  asChild
+                >
+                  <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                    <ExternalLink className="mr-2 h-4 w-4" />
+                    Demo
+                  </a>
+                </Button>
+              </div>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Projects;
