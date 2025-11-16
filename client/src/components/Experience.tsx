@@ -1,4 +1,4 @@
-import { Card } from "@/components/ui/card";
+import { Card } from "../components/ui/card";
 import { Briefcase, MapPin, Calendar } from "lucide-react";
 
 const Experience = () => {
@@ -25,6 +25,17 @@ const Experience = () => {
         "Implemented JWT authentication and tested endpoints using Postman",
         "Independently researched and implemented security features to improve internal API access controls",
         "Collaborated with database administrators to test and optimize PostgreSQL queries for performance"
+      ]
+    },
+    {
+      company: "KJ Somaiya College of Engineering",
+      role: "Mobile Development Intern",
+      location: "Mumbai, India",
+      period: "February 2023 - April 2023",
+      description: [
+        "Built a survey app in Flutter/Dart for collecting accessibility data across Mumbai railway stations",
+        "Enabled image uploads and search functionality to help users assess station accessibility",
+        "Took initiative to conduct informal user interviews to tailor app features toward real commuter needs"
       ]
     }
   ];

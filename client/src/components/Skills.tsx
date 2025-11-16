@@ -1,16 +1,16 @@
-import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { Card } from "../components/ui/card";
+import { Badge } from "../components/ui/badge";
 
 const Skills = () => {
   const skillCategories = [
     {
       title: "Languages",
-      skills: ["Python", "JavaScript", "TypeScript", "C++", "Swift", "C#"],
+      skills: ["Python", "JavaScript", "TypeScript", "C++", "Swift", "C#", "Dart", "PHP", "SQL"],
       gradient: "from-[hsl(251,100%,24%)] to-[hsl(266,100%,24%)]"
     },
     {
       title: "Frontend",
-      skills: ["React.js", "HTML/CSS", "Bootstrap", "Tailwind CSS", "Responsive Design"],
+      skills: ["React.js", "HTML/CSS", "Flutter", "Bootstrap", "Tailwind CSS", "Responsive Design"],
       gradient: "from-[hsl(266,100%,24%)] to-[hsl(280,100%,24%)]"
     },
     {

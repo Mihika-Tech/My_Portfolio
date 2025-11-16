@@ -1,4 +1,4 @@
-import { Card } from "@/components/ui/card";
+import { Card } from "../components/ui/card";
 import { Code2, Palette, Rocket } from "lucide-react";
 
 const About = () => {
@@ -30,8 +30,8 @@ const About = () => {
               performance and user experience.
             </p>
             <p className="text-lg leading-relaxed text-foreground/80">
-              When I'm not coding, you'll find me exploring new technologies, participating in hackathons, 
-              or contributing to open-source projects. I believe in continuous learning and staying ahead 
+              When I'm not coding, you'll find me exploring new technologies, losing myself in fiction and fantasy novels, 
+              or experimenting with new recipes. I believe in continuous learning and staying ahead 
               of the curve in this ever-evolving tech landscape.
             </p>
           </div>
@@ -59,10 +59,9 @@ const About = () => {
                   <Rocket className="h-6 w-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2 text-primary">Real-Time Systems</h3>
+                  <h3 className="text-xl font-semibold mb-2 text-primary">Game Development</h3>
                   <p className="text-foreground/70">
-                    Specialized in WebRTC, Socket.io, and building applications with sub-100ms latency. 
-                    Experience with video streaming and live collaboration.
+                    Building immersive 2D & 3D experiences in Unity using C#. Focused on designing intuitive mechanics, meaningful player feedback, and dynamic level design.
                   </p>
                 </div>
               </div>

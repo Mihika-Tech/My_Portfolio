@@ -1,5 +1,5 @@
-import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { Card } from "../components/ui/card";
+import { Button } from "../components/ui/button";
 import { Mail, Linkedin, Github, MapPin, Phone } from "lucide-react";
 
 const Contact = () => {
@@ -68,7 +68,7 @@ const Contact = () => {
                   className="w-full bg-white text-primary hover:bg-white/90 transition-all hover:scale-105 justify-start"
                   asChild
                 >
-                  <a href="https://www.linkedin.com/in/mihika-dakappagari/" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.linkedin.com/in/mihika-dakappagari-150a92215/" target="_blank" rel="noopener noreferrer">
                     <Linkedin className="mr-3 h-5 w-5" />
                     LinkedIn Profile
                   </a>
@@ -79,7 +79,7 @@ const Contact = () => {
                   className="w-full bg-white text-primary hover:bg-white/90 transition-all hover:scale-105 justify-start"
                   asChild
                 >
-                  <a href="https://github.com/mihikashrinivas" target="_blank" rel="noopener noreferrer">
+                  <a href="https://github.com/Mihika-Tech" target="_blank" rel="noopener noreferrer">
                     <Github className="mr-3 h-5 w-5" />
                     GitHub Profile
                   </a>

@@ -1,4 +1,4 @@
-import { Card } from "@/components/ui/card";
+import { Card } from "../components/ui/card";
 import { GraduationCap, Calendar, MapPin } from "lucide-react";
 
 const Education = () => {

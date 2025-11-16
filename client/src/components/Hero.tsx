@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "../components/ui/button";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { useState, useEffect } from "react";
 
@@ -71,7 +71,7 @@ const Hero = () => {
               className="bg-white/10 border-white/20 text-white hover:bg-white/20 backdrop-blur-sm transition-all hover:scale-105"
               asChild
             >
-              <a href="https://github.com/mihikashrinivas" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/Mihika-Tech" target="_blank" rel="noopener noreferrer">
                 <Github className="mr-2 h-5 w-5" />
                 GitHub
               </a>
@@ -82,7 +82,7 @@ const Hero = () => {
               className="bg-white/10 border-white/20 text-white hover:bg-white/20 backdrop-blur-sm transition-all hover:scale-105"
               asChild
             >
-              <a href="https://www.linkedin.com/in/mihika-dakappagari/" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/mihika-dakappagari-150a92215/" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="mr-2 h-5 w-5" />
                 LinkedIn
               </a>

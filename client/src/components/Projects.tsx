@@ -1,6 +1,6 @@
-import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+import { Card } from "../components/ui/card";
+import { Button } from "../components/ui/button";
+import { Badge } from "../components/ui/badge";
 import { ExternalLink, Github } from "lucide-react";
 import { useState } from "react";
 
@@ -14,7 +14,7 @@ const Projects = () => {
       tech: ["React", "TypeScript", "Node.js", "WebRTC", "MySQL", "Socket.io"],
       github: "https://github.com/Mihika-Tech/LiveCollab",
       demo: "#",
-      highlights: ["100+ concurrent users", "< 100ms latency", "60% faster queries"],
+      highlights: ["100+ Concurrent Users", "< 100ms Latency", "60% Faster Queries"],
       category: "fullstack"
     },
     {
@@ -23,7 +23,7 @@ const Projects = () => {
       tech: ["React", "Node.js", "AI APIs", "MongoDB"],
       github: "https://github.com/Mihika-Tech/Pantry-to-Plate",
       demo: "#",
-      highlights: ["AI recipe generation", "Smart substitutions", "Flavor customization"],
+      highlights: ["AI Recipe generation", "Smart Substitutions", "Flavor Customization"],
       category: "ai"
     },
     {
@@ -32,7 +32,7 @@ const Projects = () => {
       tech: ["React", "AI APIs", "Weather API", "Spotify API"],
       github: "https://github.com/Mihika-Tech/AI-Day-Planner",
       demo: "#",
-      highlights: ["Weather integration", "Smart recommendations", "Personalized playlists"],
+      highlights: ["Weather Integration", "Smart Recommendations", "Personalized Playlists"],
       category: "ai"
     },
     {
@@ -41,7 +41,7 @@ const Projects = () => {
       tech: ["MongoDB", "Express", "React", "Node.js", "Socket.io"],
       github: "https://github.com/Mihika-Tech/Social-Chat",
       demo: "#",
-      highlights: ["Real-time messaging", "30% lower latency", "Group chat support"],
+      highlights: ["Real-time Messaging", "30% Lower Latency", "Group Chat Support"],
       category: "fullstack"
     },
     {
@@ -50,7 +50,7 @@ const Projects = () => {
       tech: ["React", "Canvas API", "CSS Filters"],
       github: "https://github.com/Mihika-Tech/SugarBooth",
       demo: "https://mihika-tech.github.io/SugarBooth/",
-      highlights: ["Custom filters", "Sticker placement", "Photo strip export"],
+      highlights: ["Custom Filters", "Sticker Placement", "Photo Strip Export"],
       category: "fullstack"
     },
     {
@@ -59,7 +59,7 @@ const Projects = () => {
       tech: ["React", "OpenAI API", "Node.js"],
       github: "https://github.com/Mihika-Tech/GPT_Gift_Genie",
       demo: "https://mihika-tech.github.io/GPT_Gift_Genie/",
-      highlights: ["AI recommendations", "Budget optimization", "Personalized suggestions"],
+      highlights: ["AI Recommendations", "Budget Optimization", "Personalized Suggestions"],
       category: "ai"
     },
     {
@@ -68,7 +68,7 @@ const Projects = () => {
       tech: ["Django", "React", "Machine Learning", "K-means", "RL"],
       github: "#",
       demo: "#",
-      highlights: ["Learning style prediction", "Adaptive content", "ML integration"],
+      highlights: ["Learning Style Prediction", "Adaptive Content", "ML Integration"],
       category: "ai"
     },
     {
@@ -77,7 +77,7 @@ const Projects = () => {
       tech: ["SQL", "Tableau", "Data Analysis", "PostgreSQL"],
       github: "https://github.com/Mihika-Tech/Factors-Influencing-Student-Performance-SQL-Tableau-Analysis",
       demo: "https://public.tableau.com/app/profile/mihika.dakappagari/viz/StudentPerformance_17477799049500/Dashboard1?publish=yes",
-      highlights: ["Data visualization", "Predictive analytics", "Interactive dashboards"],
+      highlights: ["Data Visualization", "Predictive Analytics", "Interactive Dashboards"],
       category: "data"
     },
     {
@@ -86,7 +86,7 @@ const Projects = () => {
       tech: ["React", "TypeScript", "Local Storage"],
       github: "https://github.com/Mihika-Tech/Cozy-Pomodoro-Timer",
       demo: "https://mihika-tech.github.io/Cozy-Pomodoro-Timer/",
-      highlights: ["Ambient sounds", "Task tracking", "Beautiful UI"],
+      highlights: ["Ambient Sounds", "Task Tracking", "Beautiful UI"],
       category: "fullstack"
     },
     {
@@ -95,16 +95,16 @@ const Projects = () => {
       tech: ["Unity", "C#", "Physics Engine"],
       github: "https://github.com/Mihika-Tech/ShrinkWars",
       demo: "https://mihika-tech.github.io/ShrinkWars/",
-      highlights: ["Two-player mode", "Physics-based", "Dynamic difficulty"],
+      highlights: ["Two-Player mode", "Physics-Based", "Dynamic Difficulty"],
       category: "game"
     },
     {
-      title: "Who's the Impostor",
-      description: "Memory-puzzle game where players navigate a large map to find impostors based on color and shape patterns revealed at the start. Test your memory and observation skills in this fast-paced challenge.",
+      title: "BlindSpot",
+      description: "An observation-based, cognitive precision game where players identify impostors within a crowd while adapting to dynamic conditions such as hazards, reduced visibility, and color-shifting impostors.",
       tech: ["Unity", "C#", "Game Design"],
       github: "https://github.com/MihikaD0513/main-snack-overflow",
-      demo: "https://gaurav148.github.io/Waste-Warrior-Unity-Game/",
-      highlights: ["Memory mechanics", "Pattern recognition", "Large map exploration"],
+      demo: "https://csci-526.github.io/main-snack-overflow/",
+      highlights: ["Changing Environments", "Precision and Focus", "Large Map Exploration"],
       category: "game"
     }
   ];
