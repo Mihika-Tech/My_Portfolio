@@ -106,6 +106,15 @@ const Projects = () => {
       demo: "https://csci-526.github.io/main-snack-overflow/",
       highlights: ["Changing Environments", "Precision and Focus", "Large Map Exploration"],
       category: "game"
+    },
+    {
+      title: "Lumina: LLM Observability Platform",
+      description: "Fault-tolerant middleware for AI models using semantic vector embeddings to detect hallucinations in real-time. Implemented a Circuit Breaker pattern to prevent cascading API failures and built a live dashboard to monitor latency and quality drift.",
+      tech: ["FastAPI", "React", "Docker", "NLP", "Vector Embeddings"],
+      github: "https://github.com/Mihika-Tech/ShrinkWars",
+      demo: "#",   // Replace with your Vercel/Render link if you have one
+      highlights: ["Semantic Guardrails", "Circuit Breaker Architecture", "Real-time Inference"],
+      category: "ai"
     }
   ];
 
