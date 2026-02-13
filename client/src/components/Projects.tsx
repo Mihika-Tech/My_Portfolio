@@ -36,14 +36,23 @@ const Projects = () => {
       category: "ai"
     },
     {
-      title: "Social Chat",
-      description: "Secure real-time chat platform with group chat functionality, user authentication, profile management, and live typing indicators. Built with MERN stack and optimized for 30% lower latency.",
-      tech: ["MongoDB", "Express", "React", "Node.js", "Socket.io"],
-      github: "https://github.com/Mihika-Tech/Social-Chat",
-      demo: "#",
-      highlights: ["Real-time Messaging", "30% Lower Latency", "Group Chat Support"],
+      title: "A11y Component Lab",
+      description: "Accessibility-first component library and demo app that showcases keyboard navigation, focus management, ARIA patterns, and real testing. Includes a docs experience plus an “Accessible Task Hub” app with realistic flows like login, dashboard tables, and task actions.",
+      tech: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vitest", "Playwright"],
+      github: "https://github.com/Mihika-Tech/a11y_components",
+      demo: "https://mihika-tech.github.io/a11y_components/",
+      highlights: ["Component Lab + Docs", "Accessible Task Hub demo", "Testing and quality"],
       category: "fullstack"
     },
+    // {
+    //   title: "Social Chat",
+    //   description: "Secure real-time chat platform with group chat functionality, user authentication, profile management, and live typing indicators. Built with MERN stack and optimized for 30% lower latency.",
+    //   tech: ["MongoDB", "Express", "React", "Node.js", "Socket.io"],
+    //   github: "https://github.com/Mihika-Tech/Social-Chat",
+    //   demo: "#",
+    //   highlights: ["Real-time Messaging", "30% Lower Latency", "Group Chat Support"],
+    //   category: "fullstack"
+    // },
     {
       title: "SugarBooth",
       description: "Fun photobooth application with custom filters and dynamic sticker placement. Currently expanding features to include animated effects and photo strip generation with customization options.",
@@ -62,15 +71,15 @@ const Projects = () => {
       highlights: ["AI Recommendations", "Budget Optimization", "Personalized Suggestions"],
       category: "ai"
     },
-    {
-      title: "Personalized e-Learning System",
-      description: "Adaptive learning platform using K-means clustering to predict learning styles and reinforcement learning to customize quiz flows. Led a 3-member team to integrate ML models with educational content.",
-      tech: ["Django", "React", "Machine Learning", "K-means", "RL"],
-      github: "#",
-      demo: "#",
-      highlights: ["Learning Style Prediction", "Adaptive Content", "ML Integration"],
-      category: "ai"
-    },
+    // {
+    //   title: "Personalized e-Learning System",
+    //   description: "Adaptive learning platform using K-means clustering to predict learning styles and reinforcement learning to customize quiz flows. Led a 3-member team to integrate ML models with educational content.",
+    //   tech: ["Django", "React", "Machine Learning", "K-means", "RL"],
+    //   github: "#",
+    //   demo: "#",
+    //   highlights: ["Learning Style Prediction", "Adaptive Content", "ML Integration"],
+    //   category: "ai"
+    // },
     {
       title: "Student Performance Analysis",
       description: "Comprehensive SQL and Tableau analysis exploring how study time, attendance, demographics, and personal habits affect academic performance. Features interactive dashboards and predictive insights.",
@@ -112,7 +121,7 @@ const Projects = () => {
       description: "Fault-tolerant middleware for AI models using semantic vector embeddings to detect hallucinations in real-time. Implemented a Circuit Breaker pattern to prevent cascading API failures and built a live dashboard to monitor latency and quality drift.",
       tech: ["FastAPI", "React", "Docker", "NLP", "Vector Embeddings"],
       github: "https://github.com/Mihika-Tech/ShrinkWars",
-      demo: "#",   // Replace with your Vercel/Render link if you have one
+      demo: "#",   
       highlights: ["Semantic Guardrails", "Circuit Breaker Architecture", "Real-time Inference"],
       category: "ai"
     }
