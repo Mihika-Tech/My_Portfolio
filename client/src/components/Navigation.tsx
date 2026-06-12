@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "./ui/button";
 import { Menu, X } from "lucide-react";
-
 const Navigation = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -21,11 +20,11 @@ const Navigation = () => {
 
     const navItems = [
         { label: "About", id: "about" },
-        { label: "Projects", id: "projects" },
         { label: "Skills", id: "skills" },
+        { label: "Experience", id: "experience" },
+        { label: "Projects", id: "projects" },
+        { label: "Education", id: "education" },
         { label: "Contact", id: "contact" },
-        { label: "Experience", id: "experience"},
-        { label: "Education", id: "education"},
     ];
 
     return (
@@ -46,6 +45,12 @@ const Navigation = () => {
                                 {item.label}
                             </Button>
                         ))}
+                        {/* <Button
+                            variant="ghost"
+                            onClick={() => navigate("/blog")}
+                            className={`transition-all ${isScrolled ? "text-foreground hover:text-primary hover:bg-primary/10" : "text-white hover:bg-white/10"}`}>
+                            Blog
+                        </Button> */}
                     </div>
 
                     {/* Mobile Menu Button */}
@@ -71,6 +76,12 @@ const Navigation = () => {
                                     {item.label}
                                 </Button>
                             ))}
+                            {/* <Button
+                                variant="ghost"
+                                onClick={() => { navigate("/blog"); setIsMobileMenuOpen(false); }}
+                                className="justify-start text-foreground hover:text-primary hover:bg-primary/10">
+                                Blog
+                            </Button> */}
                         </div>
                     </div>
                 )}

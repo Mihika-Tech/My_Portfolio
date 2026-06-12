@@ -2,28 +2,28 @@ import Navigation from "../components/Navigation";
 import Hero from "../components/Hero";
 import About from "../components/About";
 import Skills from "../components/Skills";
-import Projects from "../components/Projects";
 import Experience from "../components/Experience";
+import Projects from "../components/Projects";
 import Education from "../components/Education";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
+import MascotCharacter from "../components/Mascot";
 
-const Index = () => {
-  return (
-    <div className="min-h-screen">
-      <Navigation />
-      <main>
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Experience />
-        <Education />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
-  );
-};
+const Index = () => (
+  <div className="min-h-screen">
+    <Navigation />
+    <main>
+      <Hero />
+      <About />
+      <Skills />
+      <Experience />
+      <Projects />
+      <Education />
+      <Contact />
+    </main>
+    <Footer />
+    <MascotCharacter />
+  </div>
+);
 
 export default Index;

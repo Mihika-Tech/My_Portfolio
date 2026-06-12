@@ -122,6 +122,15 @@ All colors MUST be HSL.
   }
 }
 
+@keyframes mascotWave {
+  0%, 100% { transform: rotate(-35deg); }
+  50%       { transform: rotate(-65deg); }
+}
+@keyframes bubblePop {
+  from { transform: scale(0.7); opacity: 0; }
+  to   { transform: scale(1);   opacity: 1; }
+}
+
 @layer utilities {
   .glass-card {
     background: var(--glass-bg);
